@@ -1,2 +1,4 @@
-def create_empty():
+graph = dict
+
+def create_empty() -> graph:
     return dict()
