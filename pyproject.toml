@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "networkf"
+version = "0.1.0"
+description = "A functional programming based graph library."
+authors = ["EmmyCodes <emingram49@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+toolz = "^0.11.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+hypothesis = "^6.47.5"
+black = "^22.3.0"
+mypy = "^0.961"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
