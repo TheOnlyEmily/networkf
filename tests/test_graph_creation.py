@@ -16,7 +16,6 @@ def test_add_node(node):
     new_g = graph.add_node(g, node)
     assert len(new_g) == 1
     assert node in new_g
-    assert new_g[node] == []
 
 @given(integers(), integers())
 def test_add_edge(n1, n2):
