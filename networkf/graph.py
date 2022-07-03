@@ -26,3 +26,9 @@ def from_nodes(*nodes: Any) -> graph:
         new_graph = add_node(graph, nodes[0]) if len(nodes) > 0 else {}
         return new_graph if nodes[1:] == tuple() else add_nodes(new_graph, nodes[1:])
     return add_nodes(create_empty(), nodes)
+
+def from_edges(*edges: tuple[Any, Any]) -> graph:
+    def add_edges(graph: graph, edges: tuple[tuple[Any, Any]]):
+        new_graph = add_edge(graph, *edges[0]) if len(edges) > 0 and len(edges[0]) == 2 else graph
+        return new_graph if edges[1:] == tuple() else add_edges(new_graph, edges[1:])
+    return add_edges(create_empty(), edges) 
