@@ -35,5 +35,5 @@ def test_create_from_nodes(nodes):
 @given(lists(elements=lists(integers())))
 def test_create_from_edges(edges):
     g = graph.from_edges(*edges)
-    assert len(g) > 0
+    assert len(g) >= 0
     assert len(g) <= 2 * len(edges)
